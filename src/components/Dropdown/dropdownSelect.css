@@ -1,0 +1,9 @@
+.List {
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-self: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
