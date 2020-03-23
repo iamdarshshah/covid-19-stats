@@ -6,14 +6,14 @@ import "./header.css";
 const Header = () => {
   return (
     <div style={{ width: "100%", backgroundColor: "#282c34" }}>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <header className="Header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            <code>COVID-19</code>
-          </p>
-        </header>
-      </Link>
+      <header className="Header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+            COVID-19
+          </Link>
+        </div>
+      </header>
     </div>
   );
 };

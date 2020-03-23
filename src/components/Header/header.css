@@ -1,9 +1,3 @@
-/* .h_container {
-  background-color: #686868;
-  min-height: 100vh;
-  color: white;
-} */
-
 .App-logo {
   align-items: center;
   margin-left: 2%;
@@ -30,7 +24,6 @@
   justify-content: left;
   font-size: calc(8px + 2vmin);
   color: white;
-
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }

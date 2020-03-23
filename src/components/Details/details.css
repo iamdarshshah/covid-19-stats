@@ -1,0 +1,20 @@
+.Spinner {
+  position: relative;
+  left: 45%;
+  max-width: fit-content;
+  min-height: 100%;
+}
+
+.Card {
+  position: relative;
+
+  width: 18rem;
+  margin: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Wrap {
+  display: flex;
+  flex-direction: row;
+  margin: 2% 0 0 5%;
+}

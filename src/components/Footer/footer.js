@@ -3,10 +3,10 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <div className="f_container">
+    <div>
       <footer className="footer">
         <p>
-          &copy;<code>2020</code>
+          &copy;<span>2020</span>
         </p>
       </footer>
     </div>
