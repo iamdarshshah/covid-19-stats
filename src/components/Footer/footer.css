@@ -1,0 +1,19 @@
+.footer {
+  position: relative;
+  top: 100%;
+  background-color: #282c34;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.f_container {
+  position: fixed;
+  width: 100%;
+  bottom: 0vh;
+}
