@@ -1,9 +1,26 @@
-.List {
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  align-self: center;
-  justify-content: center;
+select {
+  display: block;
+  margin: 0 auto;
   box-sizing: border-box;
+  width: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2),
+    0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+}
+
+select:hover {
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  text-decoration: none;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
 }

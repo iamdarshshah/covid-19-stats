@@ -20,7 +20,7 @@ export function getOverallStatsData() {
 
 export function storeCountryData(data) {
   return {
-    type: actionTypes.GET_COUNTRY_DATA,
+    type: actionTypes.GET_COUNTRY_LIST,
     payload: {
       data: data
     }
@@ -36,11 +36,29 @@ export function getCountryData() {
 }
 
 export function selectedCountry(data) {
-  console.log("actioncreators", data);
   return {
     type: actionTypes.SELECTED_COUNTRY,
     payload: {
       data
     }
+  };
+}
+
+export function storeSelectedCountryData(data) {
+  return {
+    type: actionTypes.GET_SELECTED_COUNTRY_DATA,
+    payload: {
+      data
+    }
+  };
+}
+
+export function getSelectedCountryData(country) {
+  return dispatch => {
+    axios
+      .get(`https://covid19.mathdro.id/api/countries/${country.toUpperCase()}`)
+      .then(response => {
+        dispatch(storeSelectedCountryData(response.data));
+      });
   };
 }

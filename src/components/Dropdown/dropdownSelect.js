@@ -9,27 +9,32 @@ class DropdownSelect extends Component {
   }
 
   handleChange = e => {
-    console.log(e.target.value);
     this.props.selectedCountry(e.target.value);
+    this.props.fetchCountryData(e.target.value);
   };
 
   render() {
     let countries = this.props.countriesList;
-    let optionItems = Object.keys(countries).map(country => (
-      <option key={country}>{country}</option>
+    let optionItems = Object.keys(countries).map(i => (
+      <option key={i}>{countries[i].name}</option>
     ));
 
-    return (
-      <div>
-        <select onChange={e => this.handleChange(e)}>{optionItems}</select>
-      </div>
-    );
+    let show = <div></div>;
+    if (!this.props.isLoading) {
+      show = (
+        <div>
+          <select onChange={e => this.handleChange(e)}>{optionItems}</select>
+        </div>
+      );
+    }
+    return <div>{show}</div>;
   }
 }
 
 const mapStateToProps = state => {
   return {
-    countriesList: state.countryList
+    countriesList: state.countryList,
+    isLoading: state.isLoading
   };
 };
 
@@ -37,7 +42,9 @@ const mapDispatchToProps = dispatch => {
   return {
     fetchCountryList: () => dispatch(actionCreators.getCountryData()),
     selectedCountry: country =>
-      dispatch(actionCreators.selectedCountry(country))
+      dispatch(actionCreators.selectedCountry(country)),
+    fetchCountryData: country =>
+      dispatch(actionCreators.getSelectedCountryData(country))
   };
 };
 
