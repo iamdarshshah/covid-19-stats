@@ -9,7 +9,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Route to="/" component={Layout} />
+        <Route to="/covid-19" component={Layout} />
       </Router>
     </Provider>
   );
